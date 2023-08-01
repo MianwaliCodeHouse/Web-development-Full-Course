@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CV Form</title>
+    <link rel="stylesheet" href="CV_form.css">
+</head>
+<body>
+    <h1>CV Form</h1>
+
+    <form action="cv.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required><br>
+
+        <h2>Education</h2>
+        <div id="education">
+            <div class="education-item">
+                <label for="degree1">Degree:</label>
+                <input type="text" id="degree1" name="education[0][degree]" required>
+
+                <label for="university1">University:</label>
+                <input type="text" id="university1" name="education[0][university]" required>
+
+                <label for="year1">Year:</label>
+                <input type="text" id="year1" name="education[0][year]" required>
+            </div>
+        </div>
+        <button type="button" onclick="addEducation()">Add Education</button><br>
+
+        <h2>Work Experience</h2>
+        <div id="work-experience">
+            <div class="work-experience-item">
+                <label for="position1">Position:</label>
+                <input type="text" id="position1" name="workExperience[0][position]" required>
+
+                <label for="company1">Company:</label>
+                <input type="text" id="company1" name="workExperience[0][company]" required>
+
+                <label for="duration1">Duration:</label>
+                <input type="text" id="duration1" name="workExperience[0][duration]" required><br>
+
+                <label>Responsibilities:</label><br>
+                <textarea name="workExperience[0][responsibilities][]" rows="3" required></textarea><br>
+            </div>
+        </div>
+        <button type="button" onclick="addWorkExperience()">Add Work Experience</button><br>
+
+        <h2>Skills</h2>
+        <div id="skills">
+            <input type="text" name="skills[]" required><br>
+        </div>
+        <button type="button" onclick="addSkill()">Add Skill</button><br>
+
+        <button type="submit" class="btn">Generate CV</button>
+    </form>
+
+    <script>
+        function addEducation() {
+            var educationDiv = document.getElementById('education');
+            var educationItem = document.createElement('div');
+            educationItem.classList.add('education-item');
+            educationItem.innerHTML = `
+                <label for="degree${educationDiv.childElementCount + 1}">Degree:</label>
+                <input type="text" id="degree${educationDiv.childElementCount + 1}" name="education[${educationDiv.childElementCount}][degree]" required>
+
+                <label for="university${educationDiv.childElementCount + 1}">University:</label>
+                <input type="text" id="university${educationDiv.childElementCount + 1}" name="education[${educationDiv.childElementCount}][university]" required>
+
+                <label for="year${educationDiv.childElementCount + 1}">Year:</label>
+                <input type="text" id="year${educationDiv.childElementCount + 1}" name="education[${educationDiv.childElementCount}][year]" required>
+            `;
+            educationDiv.appendChild(educationItem);
+        }
+
+        function addWorkExperience() {
+            var workExperienceDiv = document.getElementById('work-experience');
+            var workExperienceItem = document.createElement('div');
+            workExperienceItem.classList.add('work-experience-item');
+            workExperienceItem.innerHTML = `
+                <label for="position${workExperienceDiv.childElementCount + 1}">Position:</label>
+                <input type="text" id="position${workExperienceDiv.childElementCount + 1}" name="workExperience[${workExperienceDiv.childElementCount}][position]" required>
+
+                <label for="company${workExperienceDiv.childElementCount + 1}">Company:</label>
+                <input type="text" id="company${workExperienceDiv.childElementCount + 1}" name="workExperience[${workExperienceDiv.childElementCount}][company]" required>
+
+                <label for="duration${workExperienceDiv.childElementCount + 1}">Duration:</label>
+                <input type="text" id="duration${workExperienceDiv.childElementCount + 1}" name="workExperience[${workExperienceDiv.childElementCount}][duration]" required><br>
+
+                <label>Responsibilities:</label><br>
+                <textarea name="workExperience[${workExperienceDiv.childElementCount}][responsibilities][]" rows="3" required></textarea><br>
+            `;
+            workExperienceDiv.appendChild(workExperienceItem);
+        }
+
+        function addSkill() {
+            var skillsDiv = document.getElementById('skills');
+            var skillInput = document.createElement('input');
+            skillInput.setAttribute('type', 'text');
+            skillInput.setAttribute('name', 'skills[]');
+            skillInput.required = true;
+            skillsDiv.appendChild(skillInput);
+        }
+    </script>
+</body>
+</html>
