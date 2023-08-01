@@ -1,0 +1,35 @@
+/* cdn(content delivery network)
+@import url();
+google fonts
+variables in css 
+css fuctions(cal(),max(),min(),rgb(),rgba())
+clip path(we mostly use generator)
+transform(
+    2d(
+        translate()
+        translateX()
+        translateY()
+        rotate()
+        scaleX()
+        scaleY()
+        scale()
+        skewX()
+        skewY()
+        skew()
+        )
+    3d(
+        rotateX()
+        rotateY()
+        rotateZ()
+    )
+    float
+    animation{
+    animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 2(infinite);
+   animation-delay: 2s;
+  animation-direction: alternate,reverse,alternate-reverse;
+  animation-timing-function: linear;
+    }
+    animation: name duration timming-fuction
+*/

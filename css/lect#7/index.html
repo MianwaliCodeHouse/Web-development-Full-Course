@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:visited{
+            background-color: green;
+        }
+        a:link{
+            background-color: gray;
+            padding: 1rem;
+            color: white;
+            text-decoration: none;
+            box-sizing: border-box;
+            margin-top: 1rem;
+            display: block;
+            text-align: center;
+        }
+        a:hover{
+            background-color: yellow;
+            color: black;
+        }
+        a:active{
+            background-color: red;
+        }
+        form{
+            margin-top: 1rem;
+        }
+        #text{
+            outline: none;
+            border: none;
+        }
+        #text:focus{
+            outline: none;
+            border: 2px solid blue;
+        }
+        #email{
+            outline: none;
+            border: none;
+        }
+        #email:focus{
+            outline: none;
+            border: 2px solid yellow;
+            background-color: gray;
+        }
+        #email:valid{
+            border: 2px solid green;
+        }
+        #email:invalid{
+            border: 2px solid red;
+        }
+        #no{
+            outline: none;
+        }
+        #no:in-range{
+            
+            border: 3px solid green;
+        }
+        #no:out-of-range{
+            
+            border: 3px solid red;
+        }
+        
+        .paras p:nth-child(2n+1){
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://www.google.com/">Button</a>
+        <form action="" method="post">
+            <input type="text" id="text">
+            <input type="number" name="no" id="no" min="10" max="100">
+            <input type="email" name="" id="email">
+        </form>
+        <div class="paras">
+            <p>para1</p>
+            <p>para2</p>
+            <p>para3</p>
+            <p>para4</p>
+            <p>para5</p>
+            <p>para6</p>
+            <p>para7</p>
+            <p>para8</p>
+            <p>para9</p>
+            <p>para10</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Calculator</title>
+</head>
+<body>
+    <p align="center"><b>Complete Calculator</b></p>
+    <hr>    
+    <script>
+        // (1 way)
+        // no1=prompt("Enter the First Number:")
+        // op=prompt("Enter the Operator:")
+        // no2=prompt("Enter the Second Number:")
+        // result=no1+op+no2;
+        // (2 way)
+        result=prompt("Enter the expression:")
+        document.write(result)
+    </script>
+    <br>
+    <br>
+    <fieldset>
+        <legend>Result</legend>
+        <script>
+            document.write(eval(result));
+        </script>
+    </fieldset>
+    
+</body>
+</html>

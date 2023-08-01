@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.212);
+      height: 200px;
+    }
+    body{
+      font-family: system-ui;
+      display: grid;
+      place-content: center;
+      height: 90vh;
+    }
+    .container{
+      box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.363);
+      padding: 2rem;
+      border-radius: 5px;
+    }
+    #slider{
+      margin-top: 1rem;
+      width: 100%;
+    }
+    .box h1{
+      font-size: 5rem;
+      text-align: center;
+    }
+    .labels{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    button{
+      display: block;
+      min-width: 300px;
+      margin: 1.5rem auto;
+      padding: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .input{
+      padding: 0.5rem;
+      text-align: center;
+      font-size: 2rem;
+      max-width: 150px;
+    }
+    button{
+      background-color: rgb(30, 30, 212);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 2rem;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>Range Slider</h1>
+  <div class="container">
+    <div class="box disable">
+      <h1 id="result"></h1>
+    </div>
+    <input type="range" id="slider" value="0" oninput="display_value(this.value)">
+    <div class="labels">
+      <div>min:<span id="min">0</span></div>
+      <div>max:<span id="max">100</span></div>
+    </div>
+    <input type="number" id="min_range" class="input">
+    <input type="number" id="max_range" class="input">
+    <button onclick="setRange()">Set Range</button>
+  </div>
+</body>
+<script>
+
+  function setRange(){
+    let min=document.querySelector("#min_range").value;
+    let max=document.querySelector("#max_range").value
+
+    document.querySelector("#min").innerHTML=min;
+    document.querySelector("#max").innerHTML=max
+
+    document.querySelector("#slider").min=`${min}`;
+    document.querySelector("#slider").max=`${max}`;
+  }
+  function display_value(value){
+    document.querySelector("#result").innerHTML=value
+  }
+</script>
+</html>

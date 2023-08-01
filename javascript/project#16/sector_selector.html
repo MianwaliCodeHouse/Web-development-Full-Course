@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui;
+      font-size: 1.3rem;
+    }
+    nav{
+      position: fixed;
+      width: 100vw;
+      text-align: center;
+      padding: 1.2rem;
+      background-color: #333;
+      color: white;
+    }
+    .links{
+      margin-right: 1rem;
+      margin-left: 1rem;
+      padding: 0.4rem 0.9rem;
+    }
+    .active{
+      background-color: #fff;
+      color: black;
+      
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    section{
+      height: 100vh;
+      background-color: #181717;
+      font-size: 10rem;
+      display: grid;
+      place-content: center;
+      color: white;
+      border-bottom: 1px solid #a11818;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <span class="links active">Home</span>
+    <span class="links">About</span>
+    <span class="links">Blog</span>
+    <span class="links">Contact</span>
+  </nav>
+  <section class="home" onmouseover="changeSelection(this)">Home</section>
+  <section class="about" onmouseover="changeSelection(this)">About</section>
+  <section class="blog" onmouseover="changeSelection(this)">Blog</section>
+  <section class="contact" onmouseover="changeSelection(this)">Contact</section>
+</body>
+<script>
+  function changeSelection(elment){
+    let arr_of_all_options=document.querySelectorAll(".links")
+    arr_of_all_options.forEach(option => {
+      option.classList.remove("active")
+    });
+    if(elment.innerHTML=="Home"){
+      
+    }
+  }
+</script>
+</html>

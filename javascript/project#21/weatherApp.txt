@@ -1,0 +1,6 @@
+apiKey------->  aba6ff9d6de967d5eac6fd79114693cc
+URL---------->  https://api.openweathermap.org/data/2.5/weather
+
+URL Attributes----> 1) appid(all APIs) 2) q(all APIs)   3) units 
+
+q means query and query means city name

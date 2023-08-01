@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Record</title>
+  <style>
+    *{
+      font-family: cascadia Code;
+
+    }
+    form,h3{
+      width: 80%;
+      margin: auto;
+
+    }
+    h1{
+      color: rgb(244, 30, 30);
+      text-align: center;
+      text-decoration: underline;
+    }
+    #data{
+      display: block;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Add Record System</h1>
+  <form action="" method="get">
+    <input type="text" placeholder="Name" id="nname">
+    <input type="text" placeholder="Phone number" id="phone">
+    <input type="text" placeholder="Address" id="address">
+    <input type="button" value="Submit" onclick="runfunction()">
+  </form>
+  <h2>Records:</h2>
+  <h3 id="rzlt"></h3>
+  <script>
+    recordno=0;
+    obj={
+      name:"",
+      phone:"",
+      address:"",
+    }
+    arr=Object.keys(obj);
+    rzlt.innerHTML+="<b id='data'>"+arr+"</b><br>" ;
+    function runfunction(){
+  obj.name=nname.value;
+  obj.phone=phone.value;
+  obj.address=address.value;
+  arr=Object.values(obj);
+  recordno++
+  rzlt.innerHTML+="<b id='data'>"+recordno+" ) "+arr+"</b><br>" ;
+    }
+  </script>
+</body>
+
+</html>

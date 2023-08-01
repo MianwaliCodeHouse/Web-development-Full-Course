@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .loader{
+            height: 300px;
+            width: 300px;
+            border: 25px solid rgb(214, 214, 214);
+            border-radius: 50%;
+            border-top: 25px solid blue;
+            animation-name: spin;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes spin {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        .box{
+            height: 400px;
+            width: 400px;
+            background-color: gray;
+            position: relative;
+        }
+        .move{
+            height: 80px;
+            width: 80px;
+            background-color: blue;
+            animation-name: move;
+            animation-duration: 10s;
+            animation-iteration-count: 2;
+            animation-timing-function: ease-in;
+            position: relative;
+        }
+        .move2{
+            position: absolute;
+            top: 0;
+            animation-direction: reverse;
+        }
+        @keyframes move {
+            0%{
+                left:0px
+            }
+            25%{
+                left: 320px;
+                top: 0;
+                background-color: yellow;
+                border-radius: 50%;
+            }
+            50%{
+                top: 320px;
+                left: 320px;
+                background-color: green;
+                border-radius: 0%;
+            }
+            75%{
+                left:0px;
+                top: 320px;
+                background-color: blueviolet;
+                border-radius: 50%;
+            }
+            100%{
+                top: 0;
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="box">
+        <div class="move"></div>
+        <div class="move move2"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui;
+        }
+        body{
+            background-color: rgb(112, 43, 177);
+
+        }
+        nav{
+            /* margin: 10px; */
+            border-radius: 5px;
+            background-color: rgb(252, 245, 255);
+        }
+        nav ul{
+            list-style: none;
+        }
+        nav>ul>li{
+            display: inline-block;
+            width: 110px;
+            padding: 10px;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        nav>ul>li>ul{
+            position: absolute;
+            top: 100%;
+            left: -10px;
+            background-color: rgb(252, 246, 255);
+            padding-top: 1rem;
+            display: none;
+        } 
+        nav>ul>li>ul>li{
+            padding: 0.5rem;
+            width: 120px;
+        }
+        li>small{
+            color: gray;
+        }
+        .main{
+            position: relative;
+        }
+        .main:hover ul{
+            display: block;
+        }
+        h1{
+            color: white;
+            text-align: center;
+            font-family:monospace;
+            font-size: 50px;
+            padding: 3rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MianwaliCodeHouse</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li class="main">Courses <small>v</small>
+            <ul>
+                <li>Front-end</li>
+                <li>Back-end</li>
+            </ul></li>
+            <li>Tools</li>
+            <li>Blog</li>
+        </ul>
+    </nav>
+</body>
+</html>

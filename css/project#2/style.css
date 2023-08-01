@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+main{
+    text-align: center;
+}
+main>div{
+    border: 1px solid;
+    width: 40%;
+    display: inline-block;
+    text-align: left;
+    padding: 2rem;
+}
+main>div>p{
+    height: 300px;
+}
+.typingmaster{
+    width: 70%;
+}

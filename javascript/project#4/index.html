@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        table{
+            border: 1px solid;
+            padding: 2rem 0.4rem;
+            border-radius: 5px;
+        }
+        body{
+            display: grid;
+            place-content: center;
+            height: 100vh;
+        }
+        td,th{
+            text-align: center;
+            text-transform: capitalize;
+            padding: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>Result System</h2>
+    <br>
+    <table border="1">
+        <tr>
+            <th colspan="4" id="sname">name</th>
+        </tr>
+        <tr>
+            <th colspan="5" id="rollNo">roll no</th>
+        </tr>
+        <tr>
+            <th>Subject</th>
+            <th>Obtained Marks</th>
+            <th>Total Marks</th>
+            <th>Percentage</th>
+        </tr>
+        <tr>
+            <td id="Subject">English</td>
+            <td id="eMarks"></td>
+            <td id="TotalMarks">100</td>
+            <td id="ePercentage"></td>
+        </tr>
+        <tr>
+            <td id="Subject">Math</td>
+            <td id="mMarks"></td>
+            <td id="TotalMarks">100</td>
+            <td id="mPercentage"></td>
+        </tr>
+        <tr>
+            <td id="Subject">Computer</td>
+            <td id="cMarks"></td>
+            <td id="TotalMarks">200</td>
+            <td id="cPercentage"></td>
+        </tr>
+        <tr>
+            <th>Total Obtained Marks:</th>
+            <th id="ttmarks"></th>
+            <th>Grade</th>
+            <th id="tGrade"></th>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

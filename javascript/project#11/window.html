@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Window Creator</title>
+  <style>
+    *{
+      font-family: system-ui;
+    }
+    body{
+      display: grid;
+      place-content: center;
+      height: 95vh;
+    }
+    button{
+      margin-bottom: 1rem;
+      background-color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 1rem 1.3rem;
+    }
+    html{
+      background-color: #0e0e0e;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="openwin()">Open Window</button>
+  <button onclick="madifywin()">Add Text to Window</button>
+  <button onclick="closewin()">Close Window</button>
+  <button onclick="window.close()">Close Program</button>
+</body>
+<script>
+  let win;
+  bool=true;
+  function openwin(){
+    if (bool) {
+      win=window.open("","MyWindow","width=350,height=400")
+      bool=false;
+    }
+}
+  function madifywin(){
+    msg=prompt("Enter the message:")
+    msg+="<h1><button onclick='window.close()'>Close</button></h1>"
+    win.document.write(msg);
+  }
+  function closewin(){
+    win.close();
+    bool=true;
+  }
+</script>
+</html>

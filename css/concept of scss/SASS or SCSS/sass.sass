@@ -1,0 +1,53 @@
+/* ----SASS(Syntactical Awesome Style Sheet)---- */
+
+// -------------
+// 1)Variables 
+// ------------- 
+
+$variable_name: value;
+$variable_name: value;
+$variable_name: value;
+
+
+
+// -----------
+// 2) Operators
+// -----------
+
+selector{
+    width: 100% - 50px
+}
+
+
+
+// -------------
+// 3) Nesting
+// -------------
+
+selector{
+    property:value;
+    &::after{
+    property:value;
+    }
+    &::before{
+    property:value;
+    }
+}
+
+
+
+
+// -------------
+// 4) @mixin and @include
+// ------------- 
+
+@mixin Common_Code{
+    property:value;
+    property:value;
+}
+
+selector{
+    @include Common_Code;
+}
+
+

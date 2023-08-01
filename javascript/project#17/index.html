@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui;
+    }
+    body{
+      display: grid;
+      place-content: center;
+      height: 99vh;
+    }
+    button{
+      padding: 0.3rem 0.7rem;
+      font-size: 1.4rem;
+      text-transform: capitalize;
+      margin-right: 1rem;
+    }
+    .area{
+      width: 600px;
+      height: 600px;
+      border: 2px solid;
+      margin-top: 1rem;
+      position: relative;
+    }
+    .box{
+      background-color: green;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      transition: 1s;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button onclick="moveLeft()">left</button>
+    <button onclick="moveRight()">right</button>
+    <button onclick="moveTop()">top</button>
+    <button onclick="moveBottom()">bottom</button>
+    <div class="area">
+      <div class="box"></div>
+    </div>
+  </div>
+</body>
+<script>
+  let box=document.querySelector(".box")
+
+function moveRight(){
+  box.style.right="0"  
+  box.style.left="550px" 
+}
+function moveLeft(){
+  box.style.left="0"
+  box.style.right="550px"  
+}
+function moveBottom(){
+  box.style.bottom="0"
+  box.style.top="550px"  
+}
+function moveTop(){
+  box.style.top="0"
+  box.style.bottom="550px"  
+}
+
+</script>
+</html>

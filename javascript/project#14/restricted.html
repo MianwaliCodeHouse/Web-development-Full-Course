@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Zone</title>
+  <style>
+    *{
+      font-family: system-ui;
+    }
+    body{
+      max-width: 800px;
+      margin: auto;
+      padding: 1rem;
+    }
+#bf{
+  display: flex;
+  justify-content: space-between;
+}
+h1{
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+  <h1 id="bf">
+    <button onclick="history.back()" id="backBtn">Back</button>
+    <button onclick="history.forward()" id="backBtn">forword</button>
+  </h1>
+  <h1>Welcome to this dangerous Page</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, non? Labore natus, ducimus ullam sunt voluptatibus nihil iure voluptas. Perferendis dolorum consequuntur sequi nam incidunt aliquid soluta delectus, quis error.</p>
+  <button onclick="feedback()">Feedback</button>
+  <h3 id="Feedbacks">
+    Feedbacks:-
+  </h3>
+  <script src="script.js"></script>
+</body>
+</html>

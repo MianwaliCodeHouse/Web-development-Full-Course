@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+.df{
+    display: flex;
+}
+.a-i-c{
+    align-items: center;
+}
+.j-c-c{
+    justify-content: center;
+}
+.card{
+    width: 270px;
+    word-wrap: break-word;
+    text-align: justify;
+}
+.card img{
+    width: 100%;
+}
+.card .img{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(195, 195, 195);
+}
+.btn{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: rgb(14, 14, 199);
+    display: inline-block;
+    border-radius: 3px;
+}
+.mxy{
+    margin: 1rem;
+}
+.my{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.mx{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.pxy{
+    padding: 1rem;
+
+}
+.py{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.px{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.vh{
+    height: 100vh;
+}
+.vw{
+    width: 100vw;
+}
+.vhp{
+    height: 100%;
+
+}
+.vwp{
+    width: 100%;
+}
+.txt-c{
+    text-align: center;
+}

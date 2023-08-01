@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Key Indicator</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: system-ui;
+    }
+    .keyboard{
+      box-shadow: inset 2px 2px 5px 2px rgba(0, 0, 0, 0.425);
+      height: 400px;
+      width: 600px;
+      margin: auto;
+      display: grid;
+      place-content: center;
+    }
+    body>h1{
+      text-align: center;
+      font-size: 2.5rem;
+      text-decoration: underline;
+      margin: 5rem 0;
+    
+    }
+    .keyboard h1{
+      font-size: 20rem;
+      text-align: center;
+    }
+    body{
+      height: 100vh;
+      text-align: center;
+    }
+    .mov{
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #1111114d;
+      height: 100px;
+      width: 100px;
+      margin-top: -50px;
+      margin-left: -50px;
+      border-radius: 50%;
+      filter: blur(5px);
+      pointer-events: none;
+    }
+    h1{
+      cursor: pointer;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="mov" id="move"></div>
+  <h1>KeyIndicator</h1>
+  <div class="keyboard">
+    <h1 id="rzlt"></h1>
+  </div>
+</body>
+<script>
+  window.onkeypress=(key)=>{
+    rzlt.innerHTML=key.key
+  }
+  window.onmousemove=(mouse)=>{
+    console.log(mouse)
+    x=mouse.clientX;
+    y=mouse.clientY;
+move.style.left=x+"px"
+move.style.top=y+"px"
+  }
+</script>
+</html>

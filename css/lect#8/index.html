@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:nth-child(1)::first-letter{
+            color: red;
+            font-size: 5rem;
+            
+        }
+        p:nth-child(1)::first-line{
+            font-size: 2rem;
+            color: green;
+        }
+        ul li::marker{
+            font-size: 2rem;
+            color: green;
+        }
+        p:nth-child(3)::selection{
+            color: white;
+            background-color: #333;
+        }
+        .after::after{
+            content: "new area";
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse incidunt rerum at numquam cupiditate totam magni debitis nemo, ipsa autem dolor corrupti commodi possimus, sapiente expedita asperiores reprehenderit deleniti et!</p>
+    <hr>
+    <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+    </ul>
+    <hr>
+    <p class="section">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est praesentium, laboriosam, sequi quasi, nulla ipsum dolorum rem corporis animi magnam qui nesciunt repellat dolores? Earum aut est distinctio eius illum.</p>
+    <hr>
+    <div class="after">
+        <b>After</b>
+    </div>
+    <div class="before">
+        <b>Before</b>
+    </div>
+</body>
+</html>

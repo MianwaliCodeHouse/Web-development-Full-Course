@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Img Preview</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui;
+    }
+    body{
+      display: grid;
+      place-content: center;
+      height: 100vh;
+      background-color: #f1f1f1;
+    }
+    img{
+      max-width: 500px;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .container{
+      background-color: #fff;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+      width: 500px;
+      min-height: 300px;
+      box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.26);
+      border-radius: 5px;
+      padding: 1rem;
+    }
+    button{
+      background-color: #7e22ce;
+      color: white;
+      font-size: 1.5rem;
+      padding: 0.3rem 0.8rem;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <img src="" alt="">
+  <button onclick="document.querySelector('.input_file').click()">Choose Image</button>
+  <input type="file" class="input_file" onchange="showImage(this)" hidden>
+  </div>
+</body>
+<script>
+  let img=document.querySelector("img")
+  function showImage(input_file){
+let file=input_file.files[0]
+let src=URL.createObjectURL(file)
+img.src=`${src}`;
+  }
+</script>
+</html>

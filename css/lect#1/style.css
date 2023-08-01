@@ -1,0 +1,45 @@
+/* css links  */
+/* css systax */
+/* selector{
+    property_name: value1;
+    property_name: value;
+} */
+/* css selectors(tag,id,class,universal selector,space in selectors) */
+/* width , max-width, height, max-height  */
+/* color and text-shadow and text-shadow color,background color,border and border color ,shadow and shadow color */
+/* text decoration,text-align,list decoration */
+/* margin auto  */
+
+/* font-size,font-weight,font-family */
+/* boxsizing */
+/* margin,padding,outline */
+
+
+
+
+/* start CSS code  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    margin: auto;
+    margin-top: 10%;
+    width: 50%;
+    max-width: 600px;
+    min-width: 300px;
+    border: 10px solid blue;
+}
+img{
+    width: 80%;
+    margin-left: 10%;
+}
+ol{
+    list-style: upper-alpha;
+    padding-left: 50px;
+}
+
+
+
+

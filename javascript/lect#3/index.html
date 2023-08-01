@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="name">
+    <p>Project 1</p>
+    <!-- simple JS -->
+    <button onclick="
+    variable=prompt('Enter Number');
+    variable<0?document.write('You Enter the negative number')
+    :document.write('You Enter the positive number');
+    ">Start</button>
+    <br>
+
+    <!-- Assessing data of html tag -->
+    <!-- 1) -->
+    <p>Project 2</p>
+    <Button id="randomid" onclick="randomid.innerHTML='Random No: '+Math.floor(Math.random()*100)">Generate Random No</Button>
+    <br>
+
+    <!-- 2) -->
+    <p>Project 3</p>
+    <input type="password" name="" id="pwd">
+    <br>
+    <button onclick="pwd.type='text'">Show</button>
+    <button onclick="pwd.type='password'">Hide</button>
+    <br>
+
+    <!-- Apply CSS using inline JS  -->
+    <p>Project 4</p>
+<fieldset id="box">
+    <legend>Box</legend>
+    <p>Channel Name:</p>
+    <h1>MianwaliCodeHouse</h1>
+</fieldset>
+<button onclick="box.style.display='none'">Hide Box</button>
+<button onclick="box.style.display='block'">Show Box</button>
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+
+<!-- <script>
+    console.log(box.innerHTML);
+</script> -->
+</body>
+</html>

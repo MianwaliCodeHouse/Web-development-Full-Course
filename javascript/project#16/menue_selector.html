@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element Selector</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+    body{
+      max-width: 1000px;
+      padding-top: 2rem;
+      margin: auto;
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+      font-size: 3rem;
+      font-family: system-ui;
+      height: 100vh;
+    }
+    .menue{
+      padding: 2rem;
+    }
+    .options{
+      background-color: #b6bdff;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      margin-top: 3rem;
+    }
+    .active{
+      background-color: blue;     
+      color: white;
+      border-radius: 10px;
+    }
+    
+
+    
+  </style>
+</head>
+<body>
+  <div class="menue">
+    <div class="options active" onclick="change_selection(this)">HTML</div>
+    <div class="options" onclick="change_selection(this)">CSS</div>
+    <div class="options" onclick="change_selection(this)">JavaScript</div>
+    <div class="options" onclick="change_selection(this)">PHP</div>
+    <div class="options" onclick="change_selection(this)">PHP with MySql</div>
+  </div>
+</body>
+
+<script>
+  function change_selection(element){
+    let arr_of_all_options=document.querySelectorAll(".options")
+    arr_of_all_options.forEach(option => {
+      option.classList.remove("active")
+    });
+    element.classList.add("active")
+  }
+</script>
+</html>

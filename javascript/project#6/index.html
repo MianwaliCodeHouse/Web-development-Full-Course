@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add record System</title>
+  <style>
+    *{
+      font-family: Cascadia Code;
+      box-sizing: border-box;
+    }
+    .container{
+      max-width: 800px;
+      margin: auto;
+    }
+    h1{
+      color: red;
+      text-align: center;
+      text-decoration: underline;
+    }
+    form{
+      margin: 2rem 0 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ADD Record System</h1>
+    <form action="">
+      <input type="text" id="nname" placeholder="Enter Your name">
+      <input type="text" id="phone" placeholder="Enter mobile number">
+      <input type="text" id="address" placeholder="Enter your city name">
+      <input type="button" value="Submit" onclick="runfunction()">
+    </form>
+    <h2>Records</h2>
+    <h3 id="rzlt"></h3>
+  </div>
+</body>
+<script>
+  record_number=0;
+  obj_var={
+    name:"",
+    mobile:"",
+    address:""
+  }
+  function runfunction(){
+    obj_var.name=nname.value;
+    obj_var.mobile=phone.value;
+    obj_var.address=address.value;
+    arr=Object.keys(obj_var);
+    value=Object.values(obj_var);
+    record_number+=1;
+    rzlt.innerHTML+="Record "+record_number+"<br>";
+    for (let index = 0; index < arr.length; index++) {
+      
+      rzlt.innerHTML+=arr[index]+":"+value[index]+"<br>";
+
+    }
+    rzlt.innerHTML+="<hr>";
+  }
+</script>
+</html>

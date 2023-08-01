@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result Card System</title>
+<style>
+  *{
+    box-sizing: border-box;
+    font-family: cascadia Code;
+  }
+  .container{
+    max-width: 800px;
+    margin: auto;
+  }
+  table{
+    width: 100%;
+    border: 1px solid;
+  }
+  td,th{
+    padding: 0.5rem;
+  }
+  input[type=number]{
+width: 160px;
+  }
+  h1{
+    text-align: center;
+    color: red;
+    text-decoration: underline;
+  }
+  input{
+    padding: 0.3rem;
+    font-size:0.9rem;
+  }
+  form{
+    padding: 1rem;
+  }
+th{
+  background-color: #ebebeb;
+}
+tr:nth-child(2n+1){
+  background-color: #f6f6f6;
+}
+body{
+  padding:2rem;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Result Card System</h1>
+    <form action="">
+      <input type="text" placeholder="Std Name" id="sname">
+      <input type="text" placeholder="Std Roll no" id="roll_no">
+      <hr>
+      <input type="number" placeholder="Marks in English" id="eng">
+      <input type="number" placeholder="Marks in Math" id="math">
+      <input type="number" placeholder="Marks in Pyshics" id="pys">
+      <input type="number" placeholder="Marks in Computer" id="comp">
+      <input type="button" value="Create" onclick="makeResult()">
+    </form>
+    <hr>
+    <table border="1">
+      <tr>
+        <th>Std Name</th>
+        <th colspan="2" id="std_name">Std Name</th>
+      </tr>
+      <tr>
+        <th>Std Roll no</th>
+        <th colspan="2" id="std_roll_no">Std Roll no</th>
+      </tr>
+      <tr>
+        <th>Subject</th>
+        <th>Obt marks</th>
+        <th>Total marks</th>
+      </tr>
+      <tr>
+        <td>English</td>
+        <td id="obt_eng">Obt marks</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>Math</td>
+        <td id="obt_math">Obt marks</td>
+        <td>150</td>
+      </tr>
+      <tr>
+        <td>Pyshics</td>
+        <td id="obt_pys">Obt marks</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>Computer</td>
+        <td id="obt_comp">Obt marks</td>
+        <td>150</td>
+      </tr>
+      <tr>
+        <td>Total Marks</td>
+        <th id="total">Obt</th>
+        <th>500</th>
+      </tr>
+      <tr>
+        <td>Grade</td>
+        <td colspan="2" id="grade">You get the "..." Grade... :)</td>
+      </tr>
+    </table>
+  </div>
+<script>
+  login_status=false;
+  function makeResult(){
+if(login_status){
+console.log("run")
+  veng=Number(eng.value);
+  vmath=Number(math.value);
+  vpys=Number(pys.value);
+  vcomp=Number(comp.value);
+  obt_eng.innerHTML=veng;
+  obt_math.innerHTML=vmath;
+  obt_pys.innerHTML=vpys;
+  obt_comp.innerHTML=vcomp;
+  total_marks=veng+vmath+vcomp+vpys;
+  total.innerHTML=total_marks;
+  std_name.innerHTML=sname.value;
+  std_roll_no.innerHTML=roll_no.value;
+  if(total_marks>450){
+    grade.innerHTML=`You get the "A+" Grade`;
+  }else if(total_marks>430){
+    grade.innerHTML=`You get the "A" Grade`;
+  }else if(total_marks>400){
+    grade.innerHTML=`You get the "B+" Grade`;
+  }else if(total_marks>380){
+    grade.innerHTML=`You get the "B" Grade`;
+  }else if(total_marks>350){
+    grade.innerHTML=`You get the "C" Grade`;
+  }else if(total_marks>300){
+    grade.innerHTML=`You get the "D" Grade`;
+  }else if(total_marks>250){
+    grade.innerHTML=`You get the "E" Grade`;
+  }else {
+    grade.innerHTML=`You get the "F" Grade`;
+  }
+}else{
+  alert('Please Logined first!');
+  username=prompt("Enter User Name:")
+  if(username==="MianwaliCodeHouse"){
+    pwd=prompt('Enter your password');
+    if (pwd==="786mianwali") {
+      login_status=true;
+    }else{
+      alert('Please Enter the correct password');
+    }
+  }else{
+    alert('Please Enter the correct username');
+  }
+}
+  }
+</script>
+
+</body>
+</html>

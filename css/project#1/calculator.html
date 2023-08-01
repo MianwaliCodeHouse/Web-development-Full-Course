@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcualtor</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: blueviolet;
+        }
+        table{
+            width:100vw;
+            height:100vh;
+        }
+        .calculator{
+            border: 5px solid rgb(255, 255, 255);
+            display: inline-block;
+            background-color: #7e22ce;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.17), 0 0 0 20px white;
+        }
+        input{
+            width: 400px;
+            padding: 20px;
+            font-size: 20px;
+        }
+        .btns,.top{
+            margin-bottom: 20px;
+        }
+        .top{
+            margin-top: 10px;
+        }
+        .top button{
+            width:80px;
+            height: 50px;
+        }
+        .btns button{
+            width:80px;
+            height: 50px;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+        h1{
+            margin:10px 0 40px ;
+            font-family: system-ui;
+            font-size:50px;
+            color: white;
+            text-shadow: 2px 2px black,3px 3px rgba(255, 255, 255, 0.359);
+        }
+        button{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <th>
+            <div class="calculator">
+                <h1>Calculator</h1>
+                <div class="entry">
+                    <input type="text" id="expersion">
+
+                </div>
+                <div class="top">
+                    <button onclick="expersion.value=''">Clear</button>
+                </div>
+                <div class="btns">
+                    <button onclick="expersion.value+='1'">1</button>
+                    <button onclick="expersion.value+='2'">2</button>
+                    <button onclick="expersion.value+='3'">3</button>
+                    <button  onclick="expersion.value+='+'">+</button>
+                </div>
+                <div class="btns">
+                    <button onclick="expersion.value+='4'">4</button>
+                    <button onclick="expersion.value+='5'">5</button>
+                    <button onclick="expersion.value+='6'">6</button>
+                    <button onclick="expersion.value+='-'">-</button>
+                </div>
+                <div class="btns">
+                    <button onclick="expersion.value+='7'">7</button>
+                    <button onclick="expersion.value+='8'">8</button>
+                    <button onclick="expersion.value+='9'">9</button>
+                    <button onclick="expersion.value+='/'">/</button>
+                </div>
+                <div class="btns">
+                    <button onclick="expersion.value+='0'">0</button>
+                    <button onclick="expersion.value=eval(expersion.value)">=</button>
+                    <button onclick="expersion.value+='*'">*</button>
+                </div>
+            </div>
+        </th>
+    </table>
+</body>
+</html>

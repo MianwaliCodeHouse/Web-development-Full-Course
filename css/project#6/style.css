@@ -1,0 +1,36 @@
+.parent{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+    height: 90vh;
+}
+.parent>div{
+    border: 1px solid;
+}
+.child1{
+    grid-column: 5/9;
+    grid-row: 5/9;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+
+}
+.child1>div{
+    text-align: center;
+    background-color: green;
+}
+.subchild1{
+    grid-column: 1/2;
+}
+.subchild2{
+    grid-column: 3/-1;
+}
+.subchild3{
+    grid-column: 2/3;
+}
+.subchild5{
+    grid-column: 3/-1;
+}
+.subchild4{
+    grid-column: 1/1;
+}

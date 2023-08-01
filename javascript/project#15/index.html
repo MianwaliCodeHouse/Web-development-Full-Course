@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alarm Clock</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui;
+    }
+    body{
+      display: grid;
+      place-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    img{
+      max-width: 400px;
+      width: 100%;
+      margin-top: -5rem;
+    }
+    .clock{
+      max-width: 650px;
+      width: 90%;
+    }
+    form{
+      display: flex;
+      place-content: center;
+      margin-top: 2rem;
+    }
+    h2{
+      color: gray;
+    }
+    input{
+      width: 100px;
+      font-size: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding: 0.3rem 0.6rem;
+    }
+    button{
+      background-color: blue;
+      color: white;
+      width: 300px;
+      font-size: 1.6rem;
+      margin-top: 1rem;
+      padding: 0.4rem 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="clock">
+    <img src="assets/alarm.png" alt="" id="alarm_gif">
+    <h1 id="timeHtml"></h1>
+    <h2>Alarm at : <span id="alarm"></span> </h2>
+    <form>
+      <input type="number" placeholder="Hours" id="setmins">
+      <input type="number" placeholder="Minutes" id="setsecs">
+    </form>
+    <button onclick="setAlarm()">Set</button>
+
+    <audio src="assets/alarm.mp3" id="alarmAudio"></audio>
+  </div>
+</body>
+<script>
+  setInterval(() => {
+    var t=new Date();
+    timeHtml.innerHTML=t.toLocaleTimeString()
+  }, 1000);
+  function setAlarm(){
+    if (setmins.value=="" || setsecs.value=="") {
+      alert("plz Enter both minutes and seconds")
+    }else{
+      alarm.innerHTML=setmins.value+":"+setsecs.value+":00"
+    }
+  }
+  alarmClock=setInterval(() => {
+    
+    var ti=new Date();
+    alarmtime=alarm.innerHTML;
+    alarmtime=alarmtime.split(":")
+    h=alarmtime[0];
+    m=alarmtime[1];
+    gh=ti.getHours();
+    gm=ti.getMinutes();
+    
+    if(gh>12){
+      gh=gh-12;
+    }
+    console.log(gh,gm)
+    if(h==gh && m==gm){
+      alarm_gif.src="assets/Alarm.gif"
+      alarmAudio.play()
+      alarmAudio.loop="true"
+
+      clearInterval(alarmClock)
+    }
+  }, 1000);
+ 
+  
+
+</script>
+</html>

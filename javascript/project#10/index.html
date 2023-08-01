@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overlay Effect</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Cascadia Code;
+      }
+      #overlay {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        cursor: pointer;
+        text-align: center;
+      }
+      h1 {
+        margin-top: 20vh;
+      }
+      body {
+        display: grid;
+        place-content: center;
+        height: 100vh;
+      }
+      button {
+        background-color: blue;
+        padding: 1rem 1.4rem;
+        font-size: 1.4rem;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      @keyframes in {
+        0%{
+          transform: scale(0);
+        }
+        100%{
+          transform: scale(1);
+        }
+      }
+      @keyframes out {
+        0%{
+          transform: scale(1);
+        }
+        100%{
+          transform: scale(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="overlay" onclick="off()">
+      <h1>Overlay Effect</h1>
+      <p>it is overlay which is on the content of website</p>
+    </div>
+    <button onclick="on()">Overlay Effect Turn ON</button>
+  </body>
+  <script>
+    function on() {
+      overlay.style.display = "block";
+      overlay.style.animation = "in 0.2s ease-in";
+    }
+    function off() {
+      overlay.style.animation = "out 0.2s ease-in";
+      setTimeout(() => {
+        overlay.style.display = "none";
+      }, 200);
+      
+      
+    }
+  </script>
+</html>

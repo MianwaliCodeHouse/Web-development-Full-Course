@@ -1,0 +1,7 @@
+boilor plate
+block and inline
+achor tags(externel,internal,emailto,black,download,telephone)
+font tag(3 attributes)
+formating tages(b,i,em,strong)
+pre and code tag
+html entaties

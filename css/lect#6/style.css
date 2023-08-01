@@ -1,0 +1,36 @@
+/* 
+display: grid
+2 dimentional layout(row or colum or both)
+center div
+colum wrapping and aligning
+row wrapping and aligning
+handle many div
+you can make 2d layout very easily
+*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 1rem;
+}
+.box1{
+    grid-column: 1/13;
+}
+.box2{
+    grid-column: 1/10;
+}
+.box3{
+    grid-column: 10/-1;
+}
+.grid div{
+    border: 1px solid;
+    width: 100%;
+}
+.box4{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,270px);
+    place-content: center;
+    place-items: center;
+    gap: 1rem;
+}
+

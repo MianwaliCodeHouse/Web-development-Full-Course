@@ -1,0 +1,33 @@
+/* advance selectors
+display: inline,block,inlineblock,none
+!important
+backgroung image
+opacity
+gradients
+overflow
+position
+Units(1)px vs rem vs em 
+2)vs % vs vw and vh)
+ */
+
+ header .banner div.newnew{
+    position: sticky !important;
+    top: 0 !important;
+ }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+div.sticky {
+    /* position: -webkit-sticky; */
+    position: sticky;
+    top: 0;
+    /* padding: 5px; */
+    /* background-color: #cae8ca; */
+    /* border: 2px solid #4CAF50; */
+  }
+main{
+    height:150vh;
+}

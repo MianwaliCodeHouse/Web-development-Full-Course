@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: system-ui;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-color: rgb(30, 30, 30);
+            display: grid;
+            grid-template-columns: repeat(12,1fr);
+            gap: 1rem;
+        }
+        nav{
+            grid-column: 1/4;
+            background-color: #333;
+            box-shadow: 1px 0px 5px 1px rgba(255, 255, 255, 0.129);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        main{
+            grid-column: 4/-1;
+        }
+        nav a{
+            display: block;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 20px;
+            padding: 1rem 0;
+            margin-bottom: 5px;
+        }
+        nav h1{
+            color: yellow;
+            margin-bottom: 4rem;
+            font-size: 50px;
+            position: relative;
+            padding: 1rem 4rem;
+        }
+        nav h1::before{
+            content: "";
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-left: 1rem solid;
+            border-top: 1rem solid;
+        }
+        nav h1::after{
+            content: "";
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border-right: 1rem solid;
+            border-bottom: 1rem solid;
+        }
+        .active{
+            background-color: rgba(255, 255, 255, 0.739);
+            width: 100%;
+            color: black;
+            font-weight: 700;
+        }
+        .links{
+            width: 100%;
+            
+        }
+        .links>a:hover{
+            background-color: rgba(255, 255, 255, 0.739);
+            width: 100%;
+            color: black;
+            font-weight: 700;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="title">
+            <h1>MCH</h1>
+        </div>
+        <div class="links">
+            <a href="" class="active">Home</a>
+            <a href="">Courses</a>
+            <a href="">Blog</a>
+            <a href="">Projects</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </div>
+
+    </nav>
+    <main>
+<div class="intro">
+    <h1>Welcome to MianwaliCodeHouse</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil tempora ea aliquid fuga natus, ad commodi itaque eius ipsam quia velit quos deleniti unde eveniet harum, debitis labore quas suscipit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde ipsa nesciunt a aspernatur tenetur nemo?</p>
+    <a href="">Download CV</a>
+</div>
+    </main>
+</body>
+</html>

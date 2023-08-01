@@ -1,0 +1,43 @@
+/* -------------CSS(Cascading Style Sheet)------------ */
+
+/* -------------
+1)Variables 
+------------- */
+
+:root{
+    --variable_name: value;
+    --variable_name: value;
+    --variable_name: value;
+}
+
+/* -----------
+2) Operators
+----------- */
+
+selector{
+    width: calc(100% - 50px)
+}
+
+/* -------------
+3) Nesting
+------------- */
+
+selector{
+    property:value;
+}
+selector::after{
+    property:value;
+}
+selector::before{
+    property:value;
+}
+
+
+
+/* -------------
+4) mixing and include
+------------- */
+
+This feature is not available in CSS
+
+

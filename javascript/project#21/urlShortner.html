@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Shortener</title>
+    <style>
+      form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+label {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 400px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3f51b5;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e2466;
+}
+
+#result {
+    margin-top: 50px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    <form>
+        <label for="url">Enter a URL:</label>
+        <input type="text" id="url" name="url">
+        <button type="submit">Shorten URL</button>
+    </form>
+    <div id="result"></div>
+</body>
+<script>
+  const form = document.querySelector('form');
+const result = document.querySelector('#result');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const url = document.querySelector('#url').value;
+    const apiUrl = `https://api.shrtco.de/v2/shorten?url=${url}`;
+
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        const shortUrl = data.result.short_link;
+
+        result.innerHTML = `
+            <p>Shortened URL:</p>
+            <a href="${shortUrl}" target="_blank">${shortUrl}</a>
+        `;
+    } catch (error) {
+        console.error(error);
+    }
+});
+
+</script>
+</html>
